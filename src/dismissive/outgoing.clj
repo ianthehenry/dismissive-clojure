@@ -24,9 +24,7 @@
 (defonce outgoing-mail-ch (chan))
 
 (defn check-scheduled [before]
-  (println "checking")
   (doseq [message (incomplete-messages-before before)]
-    (println "scheduling")
     (>!! outgoing-mail-ch message)))
 
 (go-loop []
