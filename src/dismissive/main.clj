@@ -65,7 +65,8 @@
     (println "server not running")))
 
 (defn -main [& args]
-  (start-server 8080))
+  (start-server 8080)
+  (start-scheduling))
 
 #_ (stop-server)
 #_ (start-server 8080)
